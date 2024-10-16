@@ -1,6 +1,10 @@
 public class TrieNode
+public TrieNode(char value = ' ')
 {
-    public Dictionary<char, TrieNode> Children { get; set; }
+    Children = new Dictionary<char, TrieNode>();
+    IsEndOfWord = false;
+    _value = value;
+}
     public bool IsEndOfWord { get; set; }
 
     public char _value;
