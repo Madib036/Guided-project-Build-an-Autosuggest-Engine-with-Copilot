@@ -5,6 +5,22 @@ public TrieNode(char value = ' ')
     IsEndOfWord = false;
     _value = value;
 }
+// Search for a word in the trie
+public bool Search(string word) 
+{// Search for a word in the trie
+public bool Search(string word)
+{
+    TrieNode current = root;
+    foreach (char c in word)
+    {
+        if (!current.HasChild(c))
+        {
+            return false;
+        }
+        current = current.Children[c];
+    }
+    return current.IsEndOfWord;
+}
     public bool IsEndOfWord { get; set; }
 
     public char _value;
