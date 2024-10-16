@@ -80,7 +80,9 @@ public class Trie
         return GetAllWordsWithPrefix(currentNode, prefix);
     }
 
-    private List<string> GetAllWordsWithPrefix(TrieNode root, string prefix)
+    private List<string> GetAllWordsWithPrefixprivate List<string> GetAllWordsWithPrefix(TrieNode node, string prefix)
+{
+}
     {
         return null;
     }
